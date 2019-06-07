@@ -35,6 +35,7 @@ module.exports = function (app) {
                     res.json(dbUser);
                 } else {
                     res.status(500).send("get out");
+
                 }
             }
 
