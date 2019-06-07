@@ -1,57 +1,28 @@
 {
-  "name": "handlebars-boilerplate",
+  "name": "alyve",
   "version": "1.0.0",
-  "description": "Project 2 Starter",
+  "description": "The best project in the whole cohort",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "lint": "eslint --quiet .",
-    "fix": "eslint --fix .",
-    "test": "cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit"
-  },
-  "license": "ISC",
-  "dependencies": {
-    "2": "^2.0.0",
-    "bcrypt": "^3.0.6",
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "dotenv": "^6.2.0",
-    "eslint-config-airbnb": "17.1.0",
-    "eslint-plugin-import": "2.17.3",
-    "eslint-plugin-jsx-a11y": "6.2.1",
-    "eslint-plugin-react": "7.13.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^3.1.0",
-    "express-session": "^1.16.1",
-    "handlebars": "^4.1.2",
-    "mysql": "^2.17.1",
-    "mysql2": "^1.6.5",
-    "package": "^1.0.1",
-    "package.json": "^2.0.1",
-    "passport": "^0.4.0",
-    "passport-facebook": "^3.0.0",
-    "passport-local": "^1.0.0",
-    "path": "^0.12.7",
-    "sequelize": "^4.44.0"
-  },
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "chai-http": "^4.0.0",
-    "cross-env": "^5.2.0",
-    "mocha": "^5.2.0",
-    "prettier": "^1.13.7"
-  },
   "directories": {
     "test": "test"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/t-stu21/Project2.git"
+    "url": "git+https://github.com/bootcampkevin/alyve.git"
   },
-  "keywords": [],
   "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/t-stu21/Project2/issues"
+    "url": "https://github.com/bootcampkevin/alyve/issues"
   },
-  "homepage": "https://github.com/t-stu21/Project2#readme"
+  "homepage": "https://github.com/bootcampkevin/alyve#readme",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express-session": "^1.16.1",
+    "passport-local": "^1.0.0"
+  }
 }
