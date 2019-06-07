@@ -3,11 +3,10 @@ var app = express();
 var passport = require('passport');
 var session = require('express-session');
 var bodyParser = require('body-parser');
-var env = require('dotenv').load();
+//var env = require('dotenv').load();
 var exphbs = require('express-handlebars');
 var user = require('./models/user.js');
 var pport = require('./config/passport/passport.js');
-
 
 //models
 var models = require('./models');
@@ -58,7 +57,7 @@ require('./routes/htmlRoutes')(app);
 //auth routes for passport
 var authRoute = require('./routes/auth.js')(app, passport);
 // Render 404 page for any unmatched routes
-app.get('*', function (req, res) {
+app.get('*', function(req, res) {
   res.render('404');
 });
 
@@ -71,32 +70,32 @@ if (process.env.NODE_ENV === 'test') {
 }
 
 var calorieShit = {
-  "id": 2,
-  "name": "Trev",
-  "email": "trev@gmail.com",
-  "password": "$2a$10$NU4o2/d.IgvolMH0gfyWaec3xL9xVnP9Wd0ugLFbz9fXFGASrjd52",
-  "last_login": null,
-  "status": "active",
-  "age": 26,
-  "gender": "Male",
-  "weight": 180,
-  "height": 77,
-  "goal_weight": 190,
-  "daily_cals": 2339,
-  "createdAt": "2019-06-06T04:33:22.000Z",
-  "updatedAt": "2019-06-06T04:33:22.000Z"
-}
+  id: 2,
+  name: 'Trev',
+  email: 'trev@gmail.com',
+  password: '$2a$10$NU4o2/d.IgvolMH0gfyWaec3xL9xVnP9Wd0ugLFbz9fXFGASrjd52',
+  last_login: null,
+  status: 'active',
+  age: 26,
+  gender: 'Male',
+  weight: 180,
+  height: 77,
+  goal_weight: 190,
+  daily_cals: 2339,
+  createdAt: '2019-06-06T04:33:22.000Z',
+  updatedAt: '2019-06-06T04:33:22.000Z'
+};
 
 // Starting the server, syncing our models ------------------------------------/
-models.sequelize.sync().then(function () {
+models.sequelize.sync().then(function() {
   console.log('Nice! Database looks fine');
 
-  app.listen(PORT, function () {
+  app.listen(PORT, function() {
     console.log('==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.', PORT, PORT);
   });
 
   // Passport
-  app.get('/', function (req, res) {
+  app.get('/', function(req, res) {
     res.send('Welcome to Passport with Sequelize');
   });
 });
