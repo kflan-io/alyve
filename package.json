@@ -1,0 +1,28 @@
+{
+  "name": "alyve",
+  "version": "1.0.0",
+  "description": "The best project in the whole cohort",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bootcampkevin/alyve.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bootcampkevin/alyve/issues"
+  },
+  "homepage": "https://github.com/bootcampkevin/alyve#readme",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express-session": "^1.16.1",
+    "passport-local": "^1.0.0"
+  }
+}

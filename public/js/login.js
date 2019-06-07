@@ -27,7 +27,11 @@ $(document).ready(function() {
       password: passwordInput.val().trim()
     };
 
-    console.log('loginData', loginData);
+    function loginNow(loginData) {
+      $.post('/login', loginData).then(() => {
+        window.location.href = '/';
+      });
+    }
 
     function loginNow(loginData) {
       $.post('/login', loginData).then(() => {
