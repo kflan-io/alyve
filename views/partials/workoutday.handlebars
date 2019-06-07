@@ -46,7 +46,12 @@
                         {{/each}}
                     </div>
                 </div>
-
+                <div id="display-content">
+                    <h1>Hello</h1>
+                    {{#each products}}
+                    {{> products/products}}
+                    {{/each}}
+                </div>
                 <div class="container workoutday text-center">
                     <div class="row">
                         <div class="food-input"></div>
