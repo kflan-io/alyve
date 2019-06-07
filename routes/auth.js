@@ -1,6 +1,7 @@
 var passport = require('passport');
 var authController = require('../controllers/authcontroller.js');
 var db = require('../models');
+var bcrypt = require('bcryptjs');
 
 module.exports = function(app) {
   app.get('/signup', authController.signup);
@@ -17,6 +18,7 @@ module.exports = function(app) {
   app.get('/login', authController.login);
 
   app.post('/login', function(req, res, next) {
+    console.log(req.body);
     //send email
     db.User.findOne({
       where: {

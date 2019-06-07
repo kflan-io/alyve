@@ -7,8 +7,7 @@ var env = require('dotenv').load();
 var exphbs = require('express-handlebars');
 var user = require('./models/user.js');
 var pport = require('./config/passport/passport.js');
-//auth routes for passport
-var authRoute = require('./routes/auth.js')(app, passport);
+
 
 //models
 var models = require('./models');
@@ -56,6 +55,8 @@ app.set('view engine', 'handlebars');
 require('./routes/user-api-routes')(app);
 require('./routes/workoutday-api-routes')(app);
 require('./routes/htmlRoutes')(app);
+//auth routes for passport
+var authRoute = require('./routes/auth.js')(app, passport);
 // Render 404 page for any unmatched routes
 app.get('*', function (req, res) {
   res.render('404');
